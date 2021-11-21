@@ -1,0 +1,34 @@
+
+
+
+
+;;自动加载外部修改
+(global-auto-revert-mode t)
+
+;;显示全局行号 show linum-mode
+(global-linum-mode t)
+
+;;************alias 缩写***********************
+;;(abbrev-mode t)
+;;(define-abbrev-table 'global-abbrev-table '(
+					    
+					    ))
+
+;;************alias 缩写***********************
+
+;;关闭备份文件 自动保存
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
+;;开启最近打开的文件
+(recentf-mode t)
+(setq recentf-max-menu-items 25)
+
+;;开启括号高亮
+(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
+;;删除选中部分
+(delete-selection-mode t)
+
+
+(provide 'init-better-defaults)

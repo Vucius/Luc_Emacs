@@ -1,0 +1,6 @@
+#+TITLE: My Emacs Configuration
+#+AUTHOR: Vucius
+#+DATA: 2021-11-21
+#+LANGUAGE: en
+* Summary
+* Usage
