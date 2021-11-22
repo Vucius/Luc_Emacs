@@ -5,24 +5,42 @@
 
 ** ≈‰÷√LoadPath
 #+begin_src emacs-lisp
-  (add-to-list 'load-path "~/.emacs.d/init el/")
+  (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
   (defun open-init-file()
     (interactive)
     (find-file "~/.emacs.d/init.el"))
-
+  (setq custom-file (locate-user-emacs-file "custom.el"))
+  (require 'init-utils)
   (require 'init-packages)
+  (require 'init-exec-path) ;; Set up $PATH
+  (require 'init-dired)
+  (require 'init-recentf)
+  (require 'init-hippie-expand)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   (require 'init-ui)
   (require 'init-better-defaults)
   (require 'init-org)
   (require 'init-keybindings)
   (require 'init-ruby)
+
   ;;(require ')
 
 
-  (setq custom-file (expand-file-name "init el/custom.el" user-emacs-directory))
 
-  (load-file custom-file)
 #+end_src
 
 
